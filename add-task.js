@@ -1,11 +1,17 @@
 document.getElementById('taskForm').addEventListener('submit', function(event) {
-  event.preventDefault();  // جلوگیری از ارسال فرم
+  event.preventDefault();  // جلوگیری از ارسال فرم به صورت پیش‌فرض
 
   // دریافت اطلاعات وارد شده
   const title = document.getElementById('title').value;
   const description = document.getElementById('description').value;
   const dueDate = document.getElementById('dueDate').value;
   const progress = document.getElementById('progress').value;
+
+  // چک کردن اینکه ورودی‌ها خالی نباشند
+  if (!title || !description || !dueDate || !progress) {
+    alert("لطفاً تمام اطلاعات را وارد کنید.");
+    return;
+  }
 
   // تاریخ میلادی و شمسی
   const createdDateMiladi = new Date().toLocaleDateString();  // تاریخ میلادی
@@ -33,10 +39,4 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
 function convertToJalaali(date) {
   const jalaaliDate = jalaali.toJalaali(date.getFullYear(), date.getMonth() + 1, date.getDate());
   return `${jalaaliDate.jy}/${jalaaliDate.jm}/${jalaaliDate.jd}`;
-}
-
-// نمایش تقویم شمسی
-function openPersianDatePicker() {
-  // از یک کتابخانه برای نمایش تقویم شمسی استفاده کن
-  // برای سادگی اینجا باید شما از یک کتابخانه تقویم استفاده کنید، مثل PersianDatePicker
 }
