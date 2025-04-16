@@ -6,16 +6,15 @@
   <title>مدیریت پروژه</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
+  <script src="jalaali.js"></script> <!-- افزودن کتابخانه جلالی برای تاریخ شمسی -->
 </head>
 <body>
   <h1>مدیریت پروژه و وظایف روزانه</h1>
   <!-- دکمه برای افزودن تسک جدید -->
-  <button onclick="addTask()">افزودن تسک جدید</button>
+  <button onclick="window.location.href='add-task.html'">افزودن تسک جدید</button>
 
   <!-- نمایش تسک‌ها -->
-  <div id="task-container">
-    <!-- تسک‌ها اینجا نمایش داده می‌شوند -->
-  </div>
+  <div id="task-container"></div>
 
   <script src="app.js"></script>
 </body>
