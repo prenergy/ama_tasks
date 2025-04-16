@@ -1,5 +1,5 @@
 document.getElementById('taskForm').addEventListener('submit', function(event) {
-  event.preventDefault();  // جلوگیری از ارسال فرم به صورت پیش‌فرض
+  event.preventDefault();  // جلوگیری از ارسال فرم
 
   // دریافت اطلاعات وارد شده
   const title = document.getElementById('title').value;
@@ -39,4 +39,13 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
 function convertToJalaali(date) {
   const jalaaliDate = jalaali.toJalaali(date.getFullYear(), date.getMonth() + 1, date.getDate());
   return `${jalaaliDate.jy}/${jalaaliDate.jm}/${jalaaliDate.jd}`;
+}
+
+// نمایش تقویم شمسی
+function openPersianDatePicker() {
+  document.getElementById('dueDate').persianDatepicker({
+    format: 'YYYY/MM/DD', // فرمت تاریخ
+    initialValue: false,   // مقدار اولیه
+    autoClose: true        // بسته شدن خودکار تقویم بعد از انتخاب تاریخ
+  });
 }
