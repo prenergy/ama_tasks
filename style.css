@@ -1,29 +1,60 @@
+/* استایل عمومی صفحه */
 body {
   font-family: 'Arial', sans-serif;
   direction: rtl; /* راست‌چین کردن محتوا */
   text-align: right;
   background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   color: #333;
+  margin: 20px;
 }
 
+/* بخش نمایش تسک‌ها */
 #task-container {
   margin: 20px;
 }
 
+/* استایل برای هر تسک */
 .task-card {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* نوار پیشرفت تسک */
 .progress-bar {
   height: 10px;
   background-color: #ddd;
   border-radius: 5px;
   margin-top: 10px;
+  transition: width 0.5s ease;
+}
+
+/* استایل برای دکمه حذف تسک */
+button.delete {
+  background-color: #f44336;
+}
+
+button.delete:hover {
+  background-color: #e53935;
 }
