@@ -8,22 +8,24 @@
   <script src="jalaali.js"></script> <!-- برای استفاده از تاریخ شمسی -->
 </head>
 <body>
-  <h1>افزودن تسک جدید</h1>
-  <form id="taskForm">
-    <label for="title">عنوان تسک:</label>
-    <input type="text" id="title" required><br><br>
+  <div class="container">
+    <h1>افزودن تسک جدید</h1>
+    <form id="taskForm">
+      <label for="title">عنوان تسک:</label>
+      <input type="text" id="title" required><br><br>
 
-    <label for="description">توضیحات تسک:</label>
-    <textarea id="description" required></textarea><br><br>
+      <label for="description">توضیحات تسک:</label>
+      <textarea id="description" required></textarea><br><br>
 
-    <label for="dueDate">تاریخ سررسید:</label>
-    <input type="date" id="dueDate" required><br><br>
+      <label for="dueDate">تاریخ سررسید:</label>
+      <input type="date" id="dueDate" required><br><br>
 
-    <label for="progress">درصد پیشرفت:</label>
-    <input type="number" id="progress" min="0" max="100" required><br><br>
+      <label for="progress">درصد پیشرفت:</label>
+      <input type="number" id="progress" min="0" max="100" required><br><br>
 
-    <button type="submit">ذخیره تسک</button>
-  </form>
+      <button type="submit">ذخیره تسک</button>
+    </form>
+  </div>
 
   <script src="add-task.js"></script>
 </body>

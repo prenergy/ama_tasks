@@ -1,24 +1,72 @@
+/* استایل عمومی صفحه */
 body {
   font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
   direction: rtl; /* راست‌چین کردن محتوا */
   text-align: right;
-  background-color: #f4f4f4;
 }
 
+/* بخش اصلی */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* تیتر صفحه */
 h1 {
   color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-#task-container {
-  margin: 20px;
+/* دکمه‌ها */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-.task-card {
-  background: #fff;
+button:hover {
+  background-color: #45a049;
+}
+
+button.delete {
+  background-color: #f44336;
+}
+
+button.delete:hover {
+  background-color: #e53935;
+}
+
+/* فرم تسک جدید */
+form {
+  background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="number"] {
+  width: 100px;
 }
 
 .progress-bar {
@@ -26,4 +74,12 @@ h1 {
   background-color: #ddd;
   border-radius: 5px;
   margin-top: 10px;
+}
+
+.task-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
