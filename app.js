@@ -24,9 +24,9 @@ function renderTasks() {
 // حذف تسک
 function removeTask(title) {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  const updatedTasks = tasks.filter(task => task.title !== title);
-  localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-  renderTasks();
+  const updatedTasks = tasks.filter(task => task.title !== title);  // فیلتر کردن تسک حذف شده
+  localStorage.setItem('tasks', JSON.stringify(updatedTasks));  // ذخیره تغییرات در localStorage
+  renderTasks();  // رندر مجدد تسک‌ها
 }
 
 // اجرای رندر تسک‌ها

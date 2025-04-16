@@ -1,6 +1,6 @@
 /* استایل عمومی صفحه */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Tahoma', sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
@@ -20,6 +20,7 @@ h1 {
   color: #333;
   font-size: 2rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* دکمه‌ها */
